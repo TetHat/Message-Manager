@@ -1,0 +1,54 @@
+<style type="text/css" media="all">
+.sendAudio:hover, .sendVideo:hover {
+        cursor:pointer;
+}
+</style>
+<script type="text/javascript">
+$(function() {
+	$(".sendAudio").click(function() {
+		//alert($(".sendAudio").attr('data-audio'));
+		if($(this).parent("td").parent($("tr.sermonRow").attr('class')) !== 'activeRow') {
+			$("tr.sermonRow").removeClass('activeRow');
+			$(this).parent("td").parent($("tr.sermonRow")).addClass('activeRow');
+		}
+		var url = $(this).attr('data-audio');
+		var someText = '[[flowplayer? &url=`'+url+'` &height=`30` &title=`[[+title]]` &autoplay=`true` &loop=`false` ]]';
+		$("#chapelMedia").html(someText);
+		flowplayer("a.myVideos", "/assets/components/flowplayer/player/flowplayer-3.2.12.swf", {
+			plugins: {
+				audio: {
+					url: '/assets/components/flowplayer/player/plugins/flowplayer.audio-3.2.9.swf'
+				},
+				controls: {
+					fullscreen: false,
+					height: 30,
+					autoHide: false
+				}
+			},
+			clip: {
+				// these two configuration variables does the trick
+				autoPlay: true, 
+				autoBuffering: false,
+				scaling: 'scale'
+			}
+		});
+	});
+	$(".sendVideo").click(function() {
+		if($(this).parent("td").parent($("tr.sermonRow").attr('class')) !== 'activeRow') {
+			$("tr.sermonRow").removeClass('activeRow');
+			$(this).parent("td").parent($("tr.sermonRow")).addClass('activeRow');
+		}
+		var url = $(this).attr('data-video');
+		var someText = '[[flowplayer? &url=`'+url+'` &title=`[[+title]]` &autoplay=`true` &loop=`false` ]]';
+		$("#chapelMedia").html(someText);
+		flowplayer("a.myVideos", "/assets/components/flowplayer/player/flowplayer-3.2.12.swf", {
+			 clip: {
+				// these two configuration variables does the trick
+				autoPlay: true, 
+				autoBuffering: false,
+				scaling: 'scale'
+			}
+		});
+	});
+});
+</script>

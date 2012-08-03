@@ -1,0 +1,7 @@
+Changelog for message.
+
+Message 1.0.0 pl
+===========================
+ - First version of Message. Manager for audio and visual messages.
+ - Upload audio, video, and pdf files for each message.
+ - Create groups for each message to go in.
