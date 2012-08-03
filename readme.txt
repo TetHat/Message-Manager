@@ -1,7 +1,7 @@
 --------------------
 message
 --------------------
-Version: 1.0.0 pl
+Version: 1.0.1 pl
 Since: July 31st, 2012
 Author: Joshua Gulledge <jgulledge19@hotmail.com>
 License: GNU GPLv2 (or later at your option)
