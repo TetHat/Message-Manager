@@ -3,7 +3,7 @@ message
 --------------------
 Version: 1.0.1 pl
 Since: July 31st, 2012
-Author: Joshua Gulledge <jgulledge19@hotmail.com>
+Author: Joshua Gulledge
 License: GNU GPLv2 (or later at your option)
 
 Message manager is a CMP (custom manager page) and snippet for MODX Revolution. The manager allows you to easily create messages that include audio, video, and pdf related documents. 
